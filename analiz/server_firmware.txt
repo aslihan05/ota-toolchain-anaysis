@@ -1,0 +1,207 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 ff 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            Standalone App
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           Texas Instruments msp430 microcontroller
+  Version:                           0x1
+  Entry point address:               0x3100
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          65412 (bytes into file)
+  Flags:                             0x10000001: architecture variant: : unknown: unknown extra flag bits also present
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         5
+  Size of section headers:           40 (bytes)
+  Number of section headers:         20
+  Section header string table index: 17
+There are 20 section headers, starting at offset 0xff84:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        00003100 0000d4 00a0c6 00  AX  0   0  2
+  [ 2] .rodata           PROGBITS        0000d1c8 00a19c 000553 00   A  0   0  4
+  [ 3] .data             PROGBITS        00001100 00a6f0 000150 00  WA  0   0  2
+  [ 4] .bss              NOBITS          00001250 00a840 0016e8 00  WA  0   0  2
+  [ 5] .noinit           NOBITS          00002938 00a840 000002 00  WA  0   0  2
+  [ 6] .vectors          PROGBITS        0000ffc0 00a840 000040 00  AX  0   0  1
+  [ 7] .comment          PROGBITS        00000000 00a880 000030 01  MS  0   0  1
+  [ 8] .debug_aranges    PROGBITS        00000000 00a8b0 000308 00      0   0  8
+  [ 9] .debug_info       PROGBITS        00000000 00abb8 001b26 00      0   0  1
+  [10] .debug_abbrev     PROGBITS        00000000 00c6de 0009bb 00      0   0  1
+  [11] .debug_line       PROGBITS        00000000 00d099 001003 00      0   0  1
+  [12] .debug_frame      PROGBITS        00000000 00e09c 000270 00      0   0  4
+  [13] .debug_str        PROGBITS        00000000 00e30c 00046e 01  MS  0   0  1
+  [14] .debug_loc        PROGBITS        00000000 00e77a 00162d 00      0   0  1
+  [15] .debug_ranges     PROGBITS        00000000 00fda7 000108 00      0   0  1
+  [16] .gnu.attributes   GNU_ATTRIBUTES  00000000 00feaf 000011 00      0   0  1
+  [17] .shstrtab         STRTAB          00000000 00fec0 0000c4 00      0   0  1
+  [18] .symtab           SYMTAB          00000000 0102a4 0046f0 10     19 387  4
+  [19] .strtab           STRTAB          00000000 014994 003de9 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  p (processor specific)
+   text	   data	    bss	    dec	    hex	filename
+  42585	    336	   5866	  48787	   be93	udp-server.z1
+         U gpio_hal_arch_init
+00000000 T __far_bss_start
+00000000 T __far_data_start
+00001100 D __data_start
+00001100 D accmeter_process
+0000110c D cc2420_process
+00001130 D ctimer_process
+0000113c D etimer_process
+00001154 D curr_log_level_main
+000011be D sensors_process
+000011ca D simple_udp_process
+000011d6 D stack_check_process
+000011e2 D tcpip_process
+000011ee D udp_server_process
+00001250 B __bss_start
+000014d8 b ip_processor_list_list
+00001568 B process_current
+0000156a B process_list
+00002276 b udp_conn
+00002477 b initialized
+000024a9 b initialized.3799
+0000253b b started
+00002554 B cc2420_sfd_start_time
+000028ea B uip_udp_conn
+000028f2 B uip_udp_conns
+00002930 B process_maxevents
+00002938 B __noinit_start
+0000293a B __noinit_end
+00003100 W _reset_vector__
+0000310c W __init_stack
+00003110 W __low_level_init
+0000313e T main
+00003376 T __ctors_start
+00003376 T __dtors_start
+0000389c t process_thread_accmeter_process
+0000396a T accm_init
+00003a3a T autostart_start
+00003ad6 T cc2420_arch_init
+00004034 t process_thread_cc2420_process
+00004436 T cc2420_init
+0000453a T clock_init
+000045ac T init_platform
+0000499c T csma_output_init
+00004a76 t init
+00004a96 t process_thread_ctimer_process
+00004b36 T ctimer_init
+00004b4e T ctimer_set_with_process
+00004ba8 T ctimer_reset
+00004c2c T energest_init
+00004caa t process_thread_etimer_process
+00004dc0 T etimer_reset
+0000554e T i2c_receiveinit
+00005584 T i2c_transmitinit
+00005632 T leds_arch_init
+000056b2 T leds_init
+0000591c T link_stats_reset
+00005946 T link_stats_init
+0000598e T list_init
+00005aa8 T mac_sequence_init
+00005bd2 T memb_init
+00005cc8 T msp430_init_dco
+00005d68 T msp430_cpu_init
+000061ca T netstack_process_ip_callback
+00006210 T netstack_init
+0000626a T node_id_init
+00006432 T platform_init_stage_one
+00006444 T platform_init_stage_two
+000064fe T platform_init_stage_three
+000065c4 t call_process
+00006604 t exit_process
+000066bc T process_alloc_event
+000066ca T process_init
+000066e6 T process_run
+00006772 T process_nevents
+00006780 T process_post
+000067ca T process_post_synch
+000067dc T process_start
+00006812 T process_poll
+0000682a T queuebuf_init
+00006902 T random_init
+0000696c T rpl_dag_root_start
+00006a02 t init_dag
+00006a7a t process_dio_init_dag
+00006de0 T rpl_process_dio
+00006f7e T rpl_process_dis
+00006fa8 T rpl_process_dao
+0000700e T rpl_process_dao_ack
+0000705e T rpl_process_hbh
+00007084 T rpl_dag_init_root
+00007130 T rpl_dag_init
+00007eda T rpl_icmp6_init
+00007efc t reset
+000082aa T rpl_neighbor_init
+000084fa T rpl_timers_dio_reset
+000087d8 T rpl_timers_init
+000088ca t init
+00008a22 T rpl_reset_prefix
+00008ac6 T rtimer_arch_init
+00008ae8 T rtimer_init
+00008b14 t process_thread_sensors_process
+00008c4e T sicslowpan_init
+0000a11c t process_thread_simple_udp_process
+0000a1c4 T simple_udp_sendto
+0000a1f6 T simple_udp_register
+0000a282 T spi_init
+0000a2b4 T stack_check_init
+0000a336 t process_thread_stack_check_process
+0000a476 T udp_new
+0000a5cc t process_thread_tcpip_process
+0000a6fe T timer_reset
+0000a72c T tmp102_init
+0000a870 T uart0_init
+0000a8be t process_thread_udp_server_process
+0000a8f2 t udp_rx_callback
+0000a97c T uip_ds6_neighbors_init
+0000aab0 T uip_ds6_route_init
+0000b0a4 T uip_ds6_init
+0000b4f6 T uip_icmp6_init
+0000b79a T uip_nd6_init
+0000b94c T uip_sr_init
+0000ba28 T uip_udp_packet_send
+0000ba52 T uip_udp_packet_sendto
+0000bb2e t ext_hdr_options_process
+0000bc0c T uip_udpchksum
+0000bc16 T uip_init
+0000bc98 T uip_udp_new
+0000bd1c T uip_process
+0000c36e T uipbuf_init
+0000c49c T watchdog_start
+0000c4d8 T watchdog_init
+0000c530 T xmem_init
+0000d34c R autostart_processes
+0000d71c A __data_load_start
+0000d71c A __data_start_rom
+0000ffc0 T __vectors_start
+00010000 A __far_data_load_start
+
+Elf file type is EXEC (Executable file)
+Entry point 0x3100
+There are 5 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x000000 0x0000302c 0x0000302c 0x0a19a 0x0a19a R E 0x1
+  LOAD           0x00a19c 0x0000d1c8 0x0000d1c8 0x00553 0x00553 R   0x1
+  LOAD           0x00a6f0 0x00001100 0x0000d71c 0x00150 0x01838 RW  0x1
+  LOAD           0x00a840 0x00002938 0x0000d86c 0x00000 0x00002 RW  0x1
+  LOAD           0x00a840 0x0000ffc0 0x0000ffc0 0x00040 0x00040 R E 0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text 
+   01     .rodata 
+   02     .data .bss 
+   03     .noinit 
+   04     .vectors 
